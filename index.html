@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>x01 AI — Oracle Test</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🚀 x01 AI — Oracle Test</h1>
+      <p class="subtitle">Ask in any language — prices update every 10s</p>
+    </header>
+
+    <main>
+      <div class="controls">
+        <input id="query" placeholder="e.g. 'berapa harga BTC sekarang?'" />
+        <button id="askBtn">Ask</button>
+        <select id="symbolSelect">
+          <option value="BTC">BTC</option>
+          <option value="ETH">ETH</option>
+          <option value="BNB">BNB</option>
+          <option value="SOL">SOL</option>
+          <option value="MATIC">MATIC</option>
+        </select>
+      </div>
+
+      <section class="result">
+        <div id="langInfo">Detected: —</div>
+        <h2 id="priceText">—</h2>
+        <canvas id="priceChart" height="200"></canvas>
+      </section>
+
+      <footer>
+        <small>Data: CoinCap (public). Translate: Google Translate public endpoint.</small>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
